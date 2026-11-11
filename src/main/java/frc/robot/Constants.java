@@ -34,9 +34,15 @@ public final class Constants {
     public static final double DEFAULT_KV = 12.0 / MAX_RPM;
   }
 
-  /** Intake roller constants. */
+  /** Hopper flipper and ground intake roller constants. */
   public static class IntakeConstants {
     public static final int MOTOR_CAN_ID = 15;
+    public static final int FLIPPER_CAN_ID = 5;
     public static final String DASHBOARD_PREFIX = "Intake/";
+
+    // Full-output duty cycles. Motor polarity is set at calibration, so "forward"
+    // here means toward the shooter and "reverse" means back into the hopper.
+    public static final double FORWARD_OUTPUT = 1.0;
+    public static final double REVERSE_OUTPUT = -1.0;
   }
 }
